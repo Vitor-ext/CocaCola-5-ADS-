@@ -22,13 +22,6 @@ main{
     align-items: center;
 }
 
-footer{
-    height: 100px;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 75px;
-}
-
 .background-image{
     position: absolute;
     max-width: 100%;
@@ -56,37 +49,50 @@ header nav {
     filter: drop-shadow(0px 200px 20px #0006);
 }
 
-.content-text {
+.content-text{
     color: #fff;
-    position: absolute;
     font-size: 2.2rem;
     width: 212px;
+    transform: translateX(-100%);
+    position: absolute;
     text-align: end;
-    transform: translateX(-200px);
-    margin-left: 24px;
+    margin-right: 50px;
 }
 
-@media (max-width:768px){
- 
+footer{
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 75px;
+    align-items: flex-start;
+}
+
+
+@media (max-width:768px) {
+
     header nav{
         margin-left: 25px;
+    }
+
+    .content-text{
+        transform: translateX(0);
+        top: 80px;
+        font-size: 1.5rem;
+        width: 150px;
+        margin: 0;
+        text-align: center;
     }
 
     .garrafa{
         height: 70vh;
     }
 
-    .content-text{
-        transform: translateX(0);
-        top: 80px;
-        font-size: 2rem;
-        width: 150px;
-        margin: 0;
-        text-align: center;
-    }
-
     footer{
         height: 60px;
         margin-right: 25px;
+    }
+
+    .background-image{
+        visibility: hidden;
     }
 }
